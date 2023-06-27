@@ -9,6 +9,9 @@ app.use(express.static('public'))
 
 app.use('/places', require('./controllers/places'))
 
+app.use(express.urlencoded({ extended: true }))
+
+
 app.get('/', (req, res) => {
     console.log('Root route hit!');
     res.render('home');
