@@ -8,13 +8,15 @@ router.get('/new', (req, res) => {
 router.get('/:id/edit', (req, res) => {
     let id = Number(req.params.id)
     if (isNaN(id)) {
+        console.log("STEP 1")
         res.render('error404')
     }
     else if (!places[id]) {
+        console.log("STEP 2")
         res.render('error404')
     }
     else {
-        res.render('places/edit', { place: places[id] })
+        res.render('places/edit', { place: places[id], id })
     }
 })
 
@@ -69,9 +71,11 @@ router.delete('/:id', (req, res) => {
 router.put('/:id', (req, res) => {
     let id = Number(req.params.id)
     if (isNaN(id)) {
+        console.log("STEP 3")
         res.render('error404')
     }
     else if (!places[id]) {
+        console.log("STEP 4")
         res.render('error404')
     }
     else {
