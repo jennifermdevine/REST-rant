@@ -114,13 +114,13 @@ router.post('/:id/rant', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     db.Place.findByIdAndDelete(req.params.id)
-        .then(() => {
-            res.redirect('/places')
-        })
-        .catch(err => {
-            console.log('err', err)
-            res.render('error404')
-        })
+    .then(place => {
+        res.redirect('/places')
+    })
+    .catch(err => {
+        console.log('err', err)
+        res.render('error404')
+    })
 })
 
 module.exports = router
