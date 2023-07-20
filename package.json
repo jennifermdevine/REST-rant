@@ -4,7 +4,11 @@
   "description": "REST-Rant is an app where users can review restaurants.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=14 <15"
   },
   "keywords": [],
   "author": "",
@@ -18,10 +22,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "engines": {
-    "node": ">=14 <15"
-  },
-  "repository": {
+    "repository": {
     "type": "git",
     "url": "git+https://github.com/jennifermdevine/REST-rant.git"
   },
