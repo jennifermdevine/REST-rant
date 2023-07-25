@@ -1,5 +1,6 @@
 const React = require('react');
 const Def = require('../default');
+const mongoose = require('mongoose')
 
 function index (data) {
     let placesFormatted = data.places.map((place) => {
