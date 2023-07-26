@@ -1,19 +1,17 @@
-const router = require('express').Router()
-const db = require('../models')
+const router = require('express').Router();
+const db = require('../models');
 
 
 // INDEX 
 router.get('/', (req, res) => {
     db.Place.find()
-    .populate('comments')
-    .then((places) => {
-        console.log(places.comments)
-    res.render('places/index', { places })
-    })
-    .catch(err => {
-    console.log(err)
-    res.render('error404')
-    })
+        .then((places) => {
+            res.render('places/index', { places })
+        })
+        .catch(err => {
+            console.log(err)
+            res.render('error404')
+        })
 })
 
 router.post('/', (req, res) => {
@@ -123,4 +121,4 @@ router.delete('/:id', (req, res) => {
     })
 })
 
-module.exports = router
+module.exports = router;

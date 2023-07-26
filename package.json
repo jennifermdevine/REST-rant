@@ -8,11 +8,19 @@
     "start": "node server.js"
   },
   "engines": {
-    "node": ">=14 <15"
+    "node": "14.20.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jennifermdevine/REST-rant.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jennifermdevine/REST-rant/issues"
+  },
+  "homepage": "https://github.com/jennifermdevine/REST-rant#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -21,13 +29,5 @@
     "mongoose": "^5.12.11",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jennifermdevine/REST-rant.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jennifermdevine/REST-rant/issues"
-  },
-  "homepage": "https://github.com/jennifermdevine/REST-rant#readme"
+  }
 }
